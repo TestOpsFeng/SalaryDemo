@@ -1,0 +1,11 @@
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: top.testops.dao.been
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/salary?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+server:
+  port: 8000
