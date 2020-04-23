@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-    <!-- namespace：命名空间，对sql进行一个分类管理 -->
-    <!-- 注意：namespace在mapper代理时，具有重要且特殊的作用
-    mapper接口的全限定名 -->
-
-    <!--mybatis映射配置文件-->
- <!--<mapper namespace="cn.grandage.mapper.StudentMapper">-->
-     <!--<select id="findStudentById" parameterType="int" resultType="student">-->
-         <!--select * from student where id=#{id}-->
-     <!--</select>-->
-<!--</mapper>-->
-
 <mapper namespace="top.testops.dao.EmployeeDao">
-    <insert id="saveEmployee" parameterType="top.testops.dao.been.Employee">
+    <insert id="saveEmployee" parameterType="top.testops.dao.Employee">
         insert into employee value (#{id},#{name},#{address},#{salary});
     </insert>
+
 </mapper>

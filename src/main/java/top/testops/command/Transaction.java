@@ -1,6 +1,7 @@
 package top.testops.command;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 /**
   * @ClassName Transaction
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Controller;
   * @author carson
   * @date 2020/4/22
 **/
-@Controller
+@Service
 public interface Transaction {
     public void execute();
 }
