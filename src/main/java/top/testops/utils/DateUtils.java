@@ -1,5 +1,7 @@
 package top.testops.utils;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
@@ -9,6 +11,13 @@ import java.util.Calendar;
   * @date 2020/4/23
 **/
 public class DateUtils {
+    public static Timestamp string2Timestamp(String dateStr) {
+        return Timestamp.valueOf(dateStr);
+    }
+
+    public static String timestamp2String(Timestamp timestamp) {
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(timestamp);
+    }
     public static int getLastDateOfMonth(int year,int month) {
         int week = 0;
         Calendar cal = Calendar.getInstance();
@@ -24,7 +33,7 @@ public class DateUtils {
         } else if (week == 6) {
             lastDay = lastDay - 1;
         }
-        System.out.println(lastDay);
+        System.out.println(month + "月最后一天为： " + lastDay + " 号");
         return lastDay;
     }
 

@@ -22,7 +22,7 @@ public class CommissionedClassification implements PaymentClassification {
     }
 
     @Override
-    public int calculatePay(Timestamp date) {
+    public double calculatePay(Timestamp date) {
         return 0;
     }
 }

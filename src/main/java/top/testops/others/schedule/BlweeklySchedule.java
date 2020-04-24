@@ -17,7 +17,7 @@ public class BlweeklySchedule implements PaymentSchedule {
 
     @Override
     public boolean isPayday(Timestamp date) {
-        if (date.getDate() == 30) {
+        if (date.getDate() == 14) {
             return true;
         }
         return false;

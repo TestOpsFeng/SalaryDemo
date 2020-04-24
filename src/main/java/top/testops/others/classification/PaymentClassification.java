@@ -9,5 +9,5 @@ import java.sql.Timestamp;
  * @date 2020/4/23
  **/
 public interface PaymentClassification {
-    int calculatePay(Timestamp date);
+    double calculatePay(Timestamp date);
 }

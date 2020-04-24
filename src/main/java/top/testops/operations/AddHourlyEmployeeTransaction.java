@@ -9,6 +9,8 @@ import top.testops.others.schedule.MonthlySchedule;
 import top.testops.others.schedule.PaymentSchedule;
 import top.testops.others.schedule.WeeklySchedule;
 
+import java.util.List;
+
 /**
   * @ClassName AddSalaryEmployee
   * @Description TODO
@@ -17,9 +19,9 @@ import top.testops.others.schedule.WeeklySchedule;
 **/
 public class AddHourlyEmployeeTransaction extends AddEmployeeTransaction {
     private int hourSalary;
-    private TimeCard timeCard;
+    private List<TimeCard> timeCard;
 
-    public AddHourlyEmployeeTransaction(int id, String name, String address, int hourSalary,TimeCard timeCard) {
+    public AddHourlyEmployeeTransaction(int id, String name, String address, int hourSalary,List<TimeCard> timeCard) {
         super(id, name, address);
         this.hourSalary = hourSalary;
         this.timeCard = timeCard;

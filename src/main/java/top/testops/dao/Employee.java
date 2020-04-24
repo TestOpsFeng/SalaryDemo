@@ -1,5 +1,6 @@
 package top.testops.dao;
 
+import top.testops.command.Payday;
 import top.testops.others.classification.PaymentClassification;
 import top.testops.others.method.PaymentMethod;
 import top.testops.others.schedule.PaymentSchedule;

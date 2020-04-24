@@ -1,6 +1,9 @@
 package top.testops.operations;
 
 import top.testops.command.Payday;
+import top.testops.dao.Employee;
+import top.testops.dao.PayrollDatabase;
+import top.testops.utils.DateUtils;
 
 import java.sql.Timestamp;
 
@@ -18,6 +21,10 @@ public class PayDayTransaction implements Payday {
 
     @Override
     public void pay() {
+
+    }
+
+    public static void main(String[] args) {
 
     }
 }

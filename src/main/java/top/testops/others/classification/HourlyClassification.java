@@ -4,6 +4,7 @@ import top.testops.others.TimeCard;
 import top.testops.utils.DateUtils;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * @author carson
@@ -13,25 +14,26 @@ import java.sql.Timestamp;
  **/
 public class HourlyClassification implements PaymentClassification {
     public int hourSalary;
-    public TimeCard timeCard;
+    public List<TimeCard> timeCardList;
 
-    public HourlyClassification(int hourSalary, TimeCard timeCard) {
+    public HourlyClassification(int hourSalary, List<TimeCard> timeCardList) {
         this.hourSalary = hourSalary;
-        this.timeCard = timeCard;
+        this.timeCardList = timeCardList;
     }
 
-    public Timestamp getDate(){
-        return timeCard.date;
-    }
-
-    public int getHours(){
-        return timeCard.hours;
-    }
 
     @Override
-    public int calculatePay(Timestamp date) {
-        if (date.getDate() == DateUtils.getLastDateOfMonth(2020,4)){
+    public double calculatePay(Timestamp date) {
+        double salary = 0;
+        for (int i = 0; i < timeCardList.size(); i++) {
+            int hours = timeCardList.get(i).hours;
+            int overTimeHours = 0;
+            if (hours > 8) {
+                overTimeHours = hours - 8;
+                hours = 8;
+            }
+            salary = salary + overTimeHours * hourSalary * 1.5 + hours * hourSalary;
         }
-        return 0;
+        return salary;
     }
 }
